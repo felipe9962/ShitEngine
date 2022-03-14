@@ -1,0 +1,2 @@
+# ShitEngine
+ShitEngine in C++
