@@ -1,0 +1,22 @@
+cmake_minimum_required(VERSION 3.17)
+
+
+# OS Detection ----
+message(STATUS "Detecting OS ...")
+IF(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
+    message(STATUS "    OSX detected")
+    set(OSX_OS TRUE)
+    add_definitions( -DOSX_OS )
+ELSEIF(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
+    message(STATUS "    Linux detected")
+    set(LINUX_OS TRUE)
+    add_definitions( -DLINUX_OS )
+ELSE()
+    message(STATUS "    Windows detected")
+    set(WINDOWS_OS TRUE)
+    add_definitions( -DWINDOWS_OS )
+ENDIF()
+if(${CMAKE_SYSTEM_NAME} MATCHES "Android")
+    set( ANDROID_OS 1 )
+    add_definitions( -DANDROID_OS )
+endif()
