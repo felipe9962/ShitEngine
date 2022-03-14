@@ -5,7 +5,11 @@
 #ifndef OPENGL_FELIPE_OWINDOW_H
 #define OPENGL_FELIPE_OWINDOW_H
 
-
+class OWindow {
+public:
+    OWindow();
+    ~OWindow();
+};
 
 
 
